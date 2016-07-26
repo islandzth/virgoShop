@@ -25,7 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `cds`
 --
-
+CREATE DATABASE `virgo`;
+USE virgo;
 CREATE TABLE IF NOT EXISTS `cds` (
   `titel` varchar(200) COLLATE latin1_general_ci DEFAULT NULL,
   `interpret` varchar(200) COLLATE latin1_general_ci DEFAULT NULL,
