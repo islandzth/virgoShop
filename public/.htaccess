@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+#<IfModule mod_negotiation.c>
+#    Options -MultiViews
+#</IfModule>
+
+RewriteEngine On
+
+# Redirect Trailing Slashes...
+#RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+#exclude static folder
+RewriteCond %{REQUEST_URI} !^/(static/.*)$
+
+# Handle Front Controller...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]

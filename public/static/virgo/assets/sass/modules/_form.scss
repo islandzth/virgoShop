@@ -1,0 +1,87 @@
+input[type="text"],
+input[type="password"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="number"],
+select,
+textarea {
+  border: 1px solid $gray-2-color;
+  padding: 8px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+input[type="number"] {
+  height: 33px;
+}
+
+.form__search--input {
+  padding: 10px 15px !important;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-group {
+  margin: 0 0 15px 0;
+  overflow: hidden;
+}
+
+/**
+ * Login Form
+ */
+.login {
+  p {
+    margin: 0 0 15px 0;
+  }
+}
+
+.login__facebook {
+  text-align: center;
+}
+
+.login__or {
+  border-top: 1px solid $gray-2-color;
+  margin: 25px 0;
+  position: relative;
+
+  > span {
+    background: $white-color;
+    position: absolute;
+    font-size: 13px;
+    top: -10px;
+    left: 50%;
+    margin-left: -30px;
+    text-align: center;
+    width: 60px;
+  }
+}
+
+.login__form {
+  width: 600px;
+  margin: 0 auto;
+
+  .form-group {
+    > label {
+      display: inline-block;
+      width: 150px;
+      padding: 0 10px 0 0;
+      text-align: right;
+    }
+
+    > input[type="text"],
+    > input[type="password"] {
+      width: 400px;
+    }
+  }
+
+  .form-list {
+    text-indent: 154px;
+
+    > li {
+      padding: 5px 0;
+    }
+  }
+}

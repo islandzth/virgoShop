@@ -1,0 +1,97 @@
+[class*="icon--"] {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+
+[class^="icon--service-"] {
+  width: 64px;
+  height: 64px;
+}
+
+.icon--cart {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--tick,
+.icon--home,
+.icon--like,
+.icon--facebook,
+.icon--plus {
+  width: 16px;
+  height: 16px;
+}
+
+.icon--leaf {
+  background: url(../images/icon_leaf.svg) no-repeat;
+}
+
+.icon--bean {
+  background: url(../images/icon_bean.svg) no-repeat;
+}
+
+.icon--beef {
+  background: url(../images/icon_beef.svg) no-repeat;
+}
+
+.icon--fish {
+  background: url(../images/icon_fish.svg) no-repeat;
+}
+
+.icon--other {
+  background: url(../images/icon_other.svg) no-repeat;
+}
+
+.icon--service-1 {
+  background: url(../images/icon_service1.svg) no-repeat;
+  background-size: 64px 64px;
+}
+
+.icon--service-2 {
+  background: url(../images/icon_service2.svg) no-repeat;
+  background-size: 64px 64px;
+}
+
+.icon--service-3 {
+  background: url(../images/icon_service3.svg) no-repeat;
+  background-size: 64px 64px;
+}
+
+.icon--more {
+  background: url(../images/icon_more.svg) no-repeat;
+  background-size: 10px 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.icon--cart {
+  background: url(../images/icon_cart.svg) no-repeat;
+  background-size: 24px 24px;
+}
+
+.icon--tick {
+  background: url(../images/icon_tick.svg) no-repeat;
+  background-size: 16px 16px;
+}
+
+.icon--home {
+  background: url(../images/icon_home.svg) no-repeat;
+  background-size: 16px 16px;
+}
+
+.icon--like {
+  background: url(../images/icon_like.svg) no-repeat;
+  background-size: 16px 16px;
+}
+
+.icon--facebook {
+  background: url(../images/icon_facebook.svg) no-repeat;
+  background-size: 16px 16px;
+}
+
+.icon--plus {
+  background: url(../images/icon_plus.svg) no-repeat;
+  background-size: 16px 16px;
+}

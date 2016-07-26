@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px){
+	.row-offcanvas {
+		position: relative;
+		-webkit-transition: all 0.4s ease-out;
+		-moz-transition: all 0.4s ease-out;
+		transition: all 0.4s ease-out;
+	}
+	.row-offcanvas-left #sidebarLeft {
+		left: -40%;
+	}
+	.row-offcanvas-left .active {
+		left: 40%;
+	}
+	.row-offcanvas-right #sidebarRight{
+		right: -40%;
+	}
+	.row-offcanvas-right .active {
+		right: 40%;
+	}
+	.sidebar-offcanvas{
+		position: absolute;
+		top: 0px;
+		width: 40%;
+		margin-left: 10px;
+	}
+}
+.heading-title{
+	font-size: 10px;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+	color: #000;
+}
+.vr-line{
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+}

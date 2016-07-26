@@ -1,0 +1,23 @@
+.footer {
+  background: $gray-2-color;
+  padding: 20px 0;
+
+  h4 {
+    color: $dark-blue-color;
+    border-bottom: 1px dotted $dark-blue-color;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.footer--links {
+  a {
+    color: $dark-blue-color;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}

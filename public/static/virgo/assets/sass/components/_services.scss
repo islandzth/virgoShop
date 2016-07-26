@@ -1,0 +1,60 @@
+.services {
+  margin-bottom: 25px;
+}
+
+.service {
+  background: $white-color;
+  border: 1px solid $gray-2-color;
+  border-radius: 3px;
+  box-shadow: 0 0 5px $gray-2-color;
+  position: relative;
+  padding: 10px;
+  height: 195px;
+  text-align: center;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  &:before {
+    background: $white-color;
+    border: 5px solid $gray-1-color;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 99;
+    right: -35px;
+  }
+
+  &:after {
+    background: url(../images/icon_step.svg);
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    z-index: 100;
+    right: -28px;
+    opacity: .25;
+  }
+
+  &.last {
+    &:before, &:after {
+      visibility: hidden;
+    }
+  }
+
+  > h3 {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 10px 0 5px;
+  }
+
+  > p {
+    color: $gray-5-color;
+  }
+}

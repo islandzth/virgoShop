@@ -1,0 +1,96 @@
+.unstyled {
+  list-style-type: none;
+}
+
+/**
+ * Order List
+ */
+.order__item {
+  border-bottom: 1px dotted $gray-3-color;
+  padding: 5px 0;
+  overflow: hidden;
+
+  &.last {
+    border-bottom: 0;
+  }
+}
+
+.order__item--title,
+.order__item--price {
+  color: $gray-4-color;
+}
+
+.order__item--title {
+  float: left;
+  max-width: 120px;
+  @extend %text-truncate;
+}
+
+.order__item--subtotal {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.order__item--total {
+  color: #222;
+  font-size: 14px;
+}
+
+.order__item--price,
+.summary__total--value {
+  float: right;
+}
+
+/**
+ * Summary
+ */
+.summary__total {
+  background: $gray-2-color;
+  padding: 10px;
+  margin: 0 -15px;
+}
+
+.summary__total--name,
+.summary__total--value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.summary__total--name {
+  text-transform: uppercase;
+}
+
+.summary__benefit {
+  color: $green-color;
+  margin-top: 10px;
+
+  a {
+    color: $green-color;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Cart List
+ */
+.cart-list__item {
+  padding: 5px 0;
+  overflow: hidden;
+
+  .medium {
+    font-size: 16px;
+  }
+
+  .large {
+    font-size: 21px;
+  }
+}
+
+.cart-list__item--name {
+  float: left;
+}
+
+.cart-list__item--price {
+  float: right;
+}

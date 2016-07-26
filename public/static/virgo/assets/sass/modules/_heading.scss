@@ -1,0 +1,40 @@
+.title {
+  position: relative;
+}
+
+.heading {
+  color: $dark-blue-color;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.heading--title {
+  border-bottom: 1px dotted $dark-blue-color;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.heading--right {
+  position: absolute;
+  top: 3px;
+  right: 0;
+
+  .tab & {
+    top: 10px;
+  }
+
+  > a {
+    color: $blue-color;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      opacity: .7;
+    }
+  }
+
+  .icon--more {
+    margin-top: -3px;
+  }
+}

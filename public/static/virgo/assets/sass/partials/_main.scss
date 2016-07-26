@@ -1,0 +1,419 @@
+/**
+ * Main
+ */
+.main {
+  padding: 25px 0;
+}
+
+/**
+ * Section
+ */
+.section {
+  background: $white-color;
+  border: 1px solid $gray-2-color;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.line {
+  border-top: 1px dotted #204056;
+  margin: 15px 0;
+  position: relative;
+}
+
+
+/**
+ * Product
+ */
+.product {
+  background: $white-color;
+  border: 1px solid $gray-2-color;
+  border-radius: 4px;
+  padding: 0 0 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .1);
+}
+
+.product__thumb,
+.product-new__thumb {
+  display: block;
+  position: relative;
+}
+
+
+.product__thumb {
+  img {
+    width: 245px;
+    height: 150px;
+  }
+}
+
+.product__content {
+  padding: 0 10px;
+}
+
+.product__title {
+  font-size: 14px;
+  margin: 10px 0 5px;
+  text-transform: uppercase;
+  max-width: 225px;
+  @extend %text-truncate;
+
+  > a {
+    color: $gray-5-color;
+
+    &:hover, &:focus {
+      color: $red-color;
+    }
+  }
+}
+
+.product__meta {
+  overflow: hidden;
+  > li {
+    display: inline-block;
+    margin-right: -.25em;
+    font-size: 14px;
+
+    &:first-child {
+      width: 75%;
+    }
+
+    &:last-child {
+      width: 25%;
+      text-align: right;
+    }
+  }
+
+  input[type="number"] {
+    width: 75px;
+    height: 25px;
+    padding: 4px 8px;
+    margin-right: 5px;
+  }
+}
+
+.product__meta--price {
+  color: $gray-4-color;
+}
+
+.product__meta--buy {
+  color: $blue-color;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  .icon--more {
+    margin-top: -2px;
+  }
+}
+
+.product__desc {
+  margin: 5px 0;
+}
+
+.product--vertical {
+  overflow: hidden;
+
+  .product__thumb,
+  .product__content {
+    float: left;
+  }
+
+  .product__thumb {
+    margin-right: 10px;
+    width: 237px;
+  }
+
+  .product__content {
+    width: 528px;
+  }
+
+  .product__title {
+    font-size: 18px;
+  }
+}
+
+/**
+ * Product New
+ */
+.product-new {}
+
+.product-new__thumb {
+  width: 186px;
+  border: 5px solid $gray-2-color;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .modal__content & {
+    border: 2px solid $gray-2-color;
+    width: 95px;
+  }
+
+  img {
+    width: 186px;
+    height: 186px;
+
+    .modal__content & {
+      width: 95px;
+      height: 95px;
+    }
+  }
+}
+
+.product-new__title {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+
+  > a {
+    border-radius: 4px;
+    color: $dark-blue-color;
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    text-transform: uppercase;
+    max-width: 185px;
+    @extend %text-truncate;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.product-new__order {
+  background: rgba(0, 0, 0, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+
+  .icon--plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%))
+  }
+}
+
+/**
+ * Product Detail
+ */
+.product-detail {
+  background: $white-color;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.product-detail__thumb {
+  float: left;
+  width: 395px;
+  min-height: 395px;
+  margin-right: 25px;
+
+  > img {
+    width: 395px;
+    height: 395px;
+  }
+}
+
+.product-detail__content {
+  float: left;
+  width: 610px;
+  padding: 10px 0;
+}
+
+.product-detail__title {
+  color: $dark-blue-color;
+  text-transform: uppercase;
+}
+
+
+.product-detail__promote {
+  @extend .line;
+
+  > h3 {
+    background: $white-color;
+    position: absolute;
+    padding-right: 15px;
+    top: -10px;
+    left: 0;
+  }
+}
+
+.product-detail--desc {
+  padding: 5px 0;
+
+  &.last {
+    border-left: 1px solid $gray-2-color;
+    padding-left: 25px;
+  }
+
+  > h4 {
+    color: $dark-blue-color;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+
+
+/**
+ * Product Info
+ */
+.product-info {
+  > h3 {
+    color: $dark-blue-color;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+.product-info__content {
+  text-align: justify;
+  p {
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+/**
+ * Thumbnail
+ */
+.thumbnail {
+  overflow: hidden;
+  margin-top: 10px;
+  > li {
+    border: 1px solid $gray-2-color;
+    border-radius: 4px;
+    float: left;
+    width: 95px;
+    height: 95px;
+    margin-right: 5px;
+    overflow: hidden;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: 95px;
+      height: 95px;
+    }
+  }
+}
+
+/**
+ * Recipes
+ */
+.recipes {
+  > li {
+    padding: 3px 0;
+  }
+}
+
+/**
+ * Steps
+ */
+.steps {
+  > li {
+    display: inline-block;
+    padding-right: 10px;
+  }
+}
+
+.step--quanlity {
+  margin: 0 0 5px;
+}
+
+/**
+ * Review
+ */
+.review__group {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.review--label {
+  margin-bottom: 10px;
+}
+
+.review__star {
+  overflow: hidden;
+  width: 150px;
+
+  input[type="radio"] {
+    position: absolute;
+    @include opacity(0);
+
+    &:checked {
+      ~ label {
+        color: $red-color;
+      }
+    }
+  }
+
+  label {
+    cursor:pointer;
+    color: $gray-5-color;
+    display: block;
+    float: right;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    @include transition(color .3s);
+
+    &:hover, &:focus {
+      color: $blue-color;
+      ~ label {
+        color: $blue-color;
+      }
+    }
+  }
+}
+
+/**
+ * Social
+ */
+.social {
+  margin: 10px 0;
+}
+
+.social__item {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+
+  &:hover, &:focus {
+    @include opacity(.5);
+  }
+}
+
+.social__item--twitter {
+  background: url(../images/twitter.svg) no-repeat;
+}
+
+.social__item--facebook {
+  background: url(../images/facebook.svg) no-repeat;
+}
+
+.social__item--google {
+  background: url(../images/google.svg) no-repeat;
+}
+
+.social__item--pinterest {
+  background: url(../images/pinterest.svg) no-repeat;
+}

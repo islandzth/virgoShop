@@ -1,0 +1,32 @@
+/**
+ * Micro clearfix
+ */
+%cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Hide text
+ */
+%hide-text {
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+/**
+ * Text truncate
+ */
+%text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

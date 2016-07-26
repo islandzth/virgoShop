@@ -1,0 +1,47 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: $gray-1-color;
+  color: #444;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.page {
+  min-width: 1040px;
+  height: 100%;
+}
+
+a {
+  color: $blue-color;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.important {
+  color: $red-color;
+  font-weight: 700;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.text--center { text-align: center; }
+.text--left { text-align: left; }
+.text--right { text-align: right; }

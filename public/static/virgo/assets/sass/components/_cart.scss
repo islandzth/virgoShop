@@ -1,0 +1,38 @@
+/**
+ * Cart
+ */
+.cart__thumb {
+  width: 60px;
+
+  img {
+    width: 60px;
+    height: auto;
+  }
+}
+
+.cart__price,
+.cart__quantity,
+.cart__total {
+  @extend .text--center;
+}
+
+.cart__price,
+.cart__total {
+  width: 100px;
+}
+
+.cart__quantity {
+  width: 80px;
+}
+
+.cart__name {
+  max-width: 300px;
+  @extend %text-truncate;
+}
+
+/**
+ * Cart Summary
+ */
+.cart-summary {
+  @extend %cf;
+}

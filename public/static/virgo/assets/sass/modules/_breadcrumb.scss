@@ -1,0 +1,43 @@
+.breadcrumb {
+  padding: 10px 0;
+  margin-bottom: 15px;
+
+  > li {
+    display: inline-block;
+    position: relative;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      &:after {
+        visibility: hidden;
+      }
+    }
+
+    &:after {
+      content: "/";
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+    > a {
+      color: $blue-color;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+
+      &.current {
+        color: $gray-5-color;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .icon--home {
+    margin-top: -3px;
+  }
+}

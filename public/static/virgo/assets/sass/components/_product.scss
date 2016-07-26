@@ -1,0 +1,138 @@
+/**
+ * Product List
+ */
+.product-list {
+  position: relative;
+}
+
+.product-list__item {
+  border-bottom: 1px dotted $gray-2-color;
+  position: relative;
+  padding-left: 15px;
+
+  > .product-child {
+
+    > .product-child__item {
+      position: relative;
+      &:before {
+        content: "";
+        background: $gray-2-color;
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 13px;
+        left: -30px;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    background: $gray-2-color;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    content: "";
+    background: $blue-color;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 6px;
+    left: -6px;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  input[type="checkbox"],
+  label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  input[type="checkbox"] {
+    border: 1px solid $gray-3-color;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 3px;
+    box-shadow: 0 0 1px $gray-3-color;
+    @include appearance(none);
+    @include background(linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%));
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      opacity: .5;
+      visibility: hidden;
+      @include transform(translate(-50%, -50%))
+    }
+
+    &:checked {
+      &:before {
+        background: url(../images/check.png) no-repeat #59a1c9;
+        visibility: visible;
+      }
+
+      ~ label {
+        color: #59a1c9;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.product-list__item,
+.product-child__item,
+.product-child {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.product-child {
+  padding-left: 18px;
+  position: relative;
+}
+
+.product-child--last {
+  overflow: hidden;
+  .product-child__item {
+    display: block;
+    float: left;
+    width: 33.33%;
+    position: relative;
+  }
+}
+
+/**
+ * Product Vertical
+ */
+.product--detail {
+  .product__thumb {
+    width: 376px;
+
+    img {
+      width: 376px;
+      height: 232px;
+    }
+  }
+
+  input[type="number"] {
+    height: 25px;
+    padding: 4px 8px;
+    margin-right: 5px;
+  }
+}

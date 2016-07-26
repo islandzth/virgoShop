@@ -1,0 +1,45 @@
+.is-hidden {
+  display: none;
+}
+
+/**
+ * Modal
+ */
+.modal {
+  background: $white-color;
+  width: 700px;
+}
+
+.modal__header,
+.modal__content {
+  padding: 10px;
+}
+
+.modal__header {
+  .heading {
+    margin-bottom: 0;
+  }
+}
+
+.modal__content {
+  h4, p {
+    margin: 0 0 15px 0;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.modal__product {
+  border-bottom: 1px dotted $gray-5-color;
+  padding: 10px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
