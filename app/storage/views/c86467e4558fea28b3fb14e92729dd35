@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8" />
+		<title>
+			<?php $__env->startSection('title'); ?>
+				VIRGO BOUTIQUE
+			<?php echo $__env->yieldSection(); ?>
+		</title>
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="_token" content="<?php echo csrf_token(); ?>" />
+
+		<!-- CSS
+		================================================== -->
+        <!-- <link rel="stylesheet" href="<?php echo asset('static/virgo/css/bootstrap.css'); ?>"> -->
+        <link href="<?php echo asset('static/virgo/css/bootstrap.css'); ?>" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo asset('static/virgo/css/font-awesome.min.2.css'); ?>">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo asset('static/virgo/css/styles.css'); ?>">
+		<?php echo $__env->yieldContent('styles'); ?>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<?php echo $__env->make('client::layouts.default.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+			<div class="container-fluid vr-center-container">
+				<div class="row-fluid row-offcanvas row-offcanvas-left">
+					<?php echo $__env->make('client::layouts.default.category', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					<?php echo $__env->yieldContent('content'); ?>
+				</div><!--/.row row-offcanvans-->
+			</div><!--/.container-->  
+			<?php echo $__env->make('client::layouts.default.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div>
+
+
+		
+		<!-- Javascripts
+		================================================== -->
+		<script src="<?php echo asset('static/virgo/js/jquery-2.1.0.js'); ?>"></script>
+	    <script src="<?php echo asset('static/virgo/js/bootstrap.min.js'); ?>"></script>
+	     <script src="<?php echo asset('static/virgo/js/jquery.number.min.js'); ?>"></script>
+	    <script src="<?php echo asset('static/virgo/js/scripts.js'); ?>"></script>
+        <script>
+        	
+        </script>
+        <?php echo $__env->yieldContent('scripts'); ?>
+	</body>
+</html>

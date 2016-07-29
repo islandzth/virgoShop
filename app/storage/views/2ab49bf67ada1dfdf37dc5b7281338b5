@@ -1,0 +1,24 @@
+<?php $__env->startSection('content'); ?>
+<div class="col-xs-12 col-sm-10" style="text-align: center;">
+  <div class="row">
+    <?php foreach($product as $productObj): ?>
+    <div class="col-sm-6">
+      <a href="<?php echo URL::route('productdetail', array($productObj->identity, $productObj->product_id)); ?>" class="panel-delault">
+        <div class="panel-body thumbnail">
+          <img src="<?php echo Config::get('app.static_image_product_url').$productObj->image; ?>" class="img">
+          <div class="clearfix"></div>
+          <div class="panel-heading">
+          <?php $price = $productObj->option()->first() ?>
+            <h5 class="text-center"><?php echo $productObj->name; ?> <br> <?php echo number_format($price->gia); ?> USD</h5>
+          </div>
+        </div><!--/panel-body-->
+      </a><!--/panel-->
+    </div><!--/col-sm-6-->
+    <?php endforeach; ?>
+  </div><!--/.row-->
+<?php echo $product->links(); ?>
+
+</div><!--/.col-xs-12-->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('client::layouts.default.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

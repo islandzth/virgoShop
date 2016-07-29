@@ -1,0 +1,14 @@
+{
+    "admin": {
+        "enabled": true,
+        "order": 1,
+        "name": "admin",
+        "group": "app\/modules"
+    },
+    "client": {
+        "enabled": true,
+        "name": "client",
+        "order": 0,
+        "group": "app\/modules"
+    }
+}

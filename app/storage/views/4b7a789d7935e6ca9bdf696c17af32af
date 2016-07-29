@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8" />
+		<title>
+			<?php $__env->startSection('title'); ?>
+				Laravel 4 Sample Site
+			<?php echo $__env->yieldSection(); ?>
+		</title>
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="_token" content="<?php echo csrf_token(); ?>" />
+
+		<!-- CSS
+		================================================== -->
+        <link rel="stylesheet" href="<?php echo asset('static/muadambao/components/bootstrap/css/bootstrap.css'); ?>">
+        <link rel="stylesheet" href="<?php echo asset('static/muadambao/css/common.css'); ?>">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<?php echo $__env->yieldContent('styles'); ?>
+		<script type="text/Javascript">
+			var ADMIN_URL="<?php echo Config::get('app.admin_url'); ?>";
+		</script>
+	</head>
+
+	<body>
+		<?php echo $__env->make('admin::layouts.default.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<div class="container">
+			<div id="page-content">
+				<!-- Content -->
+				<?php echo $__env->yieldContent('content'); ?>
+				<!-- ./ content -->
+			</div>
+			<?php echo $__env->make('admin::layouts.default.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div>
+		
+		<!-- Javascripts
+		================================================== -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="<?php echo asset('static/muadambao/js/form-master/jquery.form.js'); ?>"></script>
+        <script src="<?php echo asset('static/muadambao/components/bootstrap/js/bootstrap.js'); ?>"></script>
+        
+	    <script src="<?php echo asset('static/muadambao/js/form-master/jquery.form.js'); ?>"></script>
+	    <script src="<?php echo asset('static/muadambao/js/jquery.validate.min.js?v=2'); ?>"></script>
+	    <script src="<?php echo asset('static/muadambao/js/jquery.serializeJSON-master/jquery.serializejson.js'); ?>"></script>
+	    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	    <script src="<?php echo asset('static/virgo/js/jquery.number.min.js'); ?>"></script>
+        <script>
+        	$(function() {
+			    $.ajaxSetup({
+			        headers: {
+			            'X-CSRF-Token': $('meta[name="_token"]').attr('content')
+			        },
+			        data:{
+			        	_token: $('meta[name="_token"]').attr('content')
+			        }
+			    });
+			});
+			var CSRF_TOKEN = '<?=csrf_token()?>';
+        </script>
+        <?php echo $__env->yieldContent('scripts'); ?>
+	</body>
+</html>
