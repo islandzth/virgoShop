@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 -- Dumping data for table `category`
 --
 
-INSERT DELAYED IGNORE INTO `category` (`category_id`, `identity`, `name`, `sex`, `enable`, `discription`, `created_at`, `updated_at`) VALUES
+INSERT INTO `category` (`category_id`, `identity`, `name`, `sex`, `enable`, `discription`, `created_at`, `updated_at`) VALUES
 (5, 'dresses', 'DRESSES', '0', 0, 'dưa tehs cheoi dưa', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (6, 't-shitrts', 'T-SHITRTS', '0', 0, 'dwagr ưda', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (7, 'bags', 'BAGS', '0', 0, 'dwagr ưda ad', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `cds` (
 -- Dumping data for table `cds`
 --
 
-INSERT DELAYED IGNORE INTO `cds` (`titel`, `interpret`, `jahr`, `id`) VALUES
+INSERT  INTO `cds` (`titel`, `interpret`, `jahr`, `id`) VALUES
 ('Beauty', 'Ryuichi Sakamoto', 1990, 1),
 ('Goodbye Country (Hello Nightclub)', 'Groove Armada', 2001, 4),
 ('Glee', 'Bran Van 3000', 1997, 5);
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `district` (
 -- Dumping data for table `district`
 --
 
-INSERT DELAYED IGNORE INTO `district` (`districtid`, `name`, `type`, `location`, `provinceid`) VALUES
+INSERT  INTO `district` (`districtid`, `name`, `type`, `location`, `provinceid`) VALUES
 ('001', 'Ba Đình', 'Quận', '21 02 08N, 105 49 38E', '01'),
 ('002', 'Hoàn Kiếm', 'Quận', '21 01 53N, 105 51 09E', '01'),
 ('003', 'Tây Hồ', 'Quận', '21 04 10N, 105 49 07E', '01'),
@@ -810,7 +810,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 -- Dumping data for table `migrations`
 --
 
-INSERT DELAYED IGNORE INTO `migrations` (`migration`, `batch`) VALUES
+INSERT  INTO `migrations` (`migration`, `batch`) VALUES
 ('2015_09_17_112833_create_category_table', 1),
 ('2015_09_18_090758_create_users_table', 2),
 ('2015_09_18_091706_create_product_table', 3),
@@ -982,7 +982,7 @@ CREATE TABLE IF NOT EXISTS `pma_recent` (
 -- Dumping data for table `pma_recent`
 --
 
-INSERT DELAYED IGNORE INTO `pma_recent` (`username`, `tables`) VALUES
+INSERT  INTO `pma_recent` (`username`, `tables`) VALUES
 ('root', '[{"db":"virgo","table":"migrations"},{"db":"phpmyadmin","table":"pma_column_info"},{"db":"phpmyadmin","table":"pma_designer_coords"},{"db":"phpmyadmin","table":"pma_history"},{"db":"phpmyadmin","table":"pma_pdf_pages"},{"db":"phpmyadmin","table":"pma_recent"},{"db":"phpmyadmin","table":"pma_relation"},{"db":"cdcol","table":"cds"},{"db":"mysql","table":"user"},{"db":"mysql","table":"help_relation"}]');
 
 -- --------------------------------------------------------
@@ -1105,7 +1105,7 @@ CREATE TABLE IF NOT EXISTS `pma_userconfig` (
 -- Dumping data for table `pma_userconfig`
 --
 
-INSERT DELAYED IGNORE INTO `pma_userconfig` (`username`, `timevalue`, `config_data`) VALUES
+INSERT  INTO `pma_userconfig` (`username`, `timevalue`, `config_data`) VALUES
 ('root', '2015-10-19 07:39:34', '{"collation_connection":"utf8mb4_unicode_ci"}');
 
 -- --------------------------------------------------------
@@ -1161,7 +1161,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Dumping data for table `product`
 --
 
-INSERT DELAYED IGNORE INTO `product` (`product_id`, `name`, `identity`, `image`, `category`, `meta_keyword`, `description`, `summary`, `enable`, `created_at`, `updated_at`) VALUES
+INSERT INTO `product` (`product_id`, `name`, `identity`, `image`, `category`, `meta_keyword`, `description`, `summary`, `enable`, `created_at`, `updated_at`) VALUES
 (16, 'Sản phẩm 1', 'n-pham-1', '4a5bce5d5af0cc4c17e2db1cf8d8d5010.jpg', '5', '', 'Sản phẩm được thiết kế với phong cách trẻ trung phù hợp với người lớn tuổi', '', 0, '2015-11-10 20:24:53', '2016-07-26 03:35:18'),
 (17, 'Sản phẩm 2', 'n-pham-2', 'c40f62446c2fc0657e01dc983c91e3251.jpg', '6', '', 'Thiết kế nhã nhặn phù hợp với bạn trẻ trâu', '', 0, '2015-11-10 21:27:55', '2016-07-26 03:31:49'),
 (18, 'Sản phẩm 3', 'n-pham-3', 'bb69555eb11047d711ac092c8c38a2762.jpg', '7', '', 'Thiết kế mạnh mẽ phù hợp với phái nữ', '', 0, '2015-11-10 21:29:43', '2016-07-26 03:31:50'),
@@ -1200,7 +1200,7 @@ CREATE TABLE IF NOT EXISTS `product_image` (
 -- Dumping data for table `product_image`
 --
 
-INSERT DELAYED IGNORE INTO `product_image` (`id`, `product_id`, `image_name`, `created_at`, `updated_at`) VALUES
+INSERT  INTO `product_image` (`id`, `product_id`, `image_name`, `created_at`, `updated_at`) VALUES
 (27, 14, '7cc9eb687b49ea4668d82a35fa30203f0.jpg', '2015-10-08 19:52:33', '2015-10-08 19:52:33'),
 (28, 14, '7cc9eb687b49ea4668d82a35fa30203f1.jpg', '2015-10-08 19:52:33', '2015-10-08 19:52:33'),
 (29, 14, '7cc9eb687b49ea4668d82a35fa30203f2.jpg', '2015-10-08 19:52:33', '2015-10-08 19:52:33'),
@@ -1292,7 +1292,7 @@ CREATE TABLE IF NOT EXISTS `product_meta` (
 -- Dumping data for table `product_meta`
 --
 
-INSERT DELAYED IGNORE INTO `product_meta` (`id`, `product_id`, `size`, `gia`, `enable`, `created_at`, `updated_at`) VALUES
+INSERT  INTO `product_meta` (`id`, `product_id`, `size`, `gia`, `enable`, `created_at`, `updated_at`) VALUES
 (14, 12, 'caro den', '160000', 1, '2015-10-07 20:55:47', '2015-11-10 20:10:01'),
 (15, 12, 'caro cam', '160000', 1, '2015-10-07 20:55:47', '2015-11-10 20:10:01'),
 (16, 13, 'xanh', '100000', 1, '2015-10-07 20:58:22', '2015-11-10 20:08:56'),
@@ -1350,7 +1350,7 @@ CREATE TABLE IF NOT EXISTS `province` (
 -- Dumping data for table `province`
 --
 
-INSERT DELAYED IGNORE INTO `province` (`provinceid`, `name`, `type`) VALUES
+INSERT  INTO `province` (`provinceid`, `name`, `type`) VALUES
 ('01', 'Hà Nội', 'Thành Phố'),
 ('02', 'Hà Giang', 'Tỉnh'),
 ('04', 'Cao Bằng', 'Tỉnh'),
@@ -1456,7 +1456,7 @@ CREATE TABLE IF NOT EXISTS `user_admin` (
 -- Dumping data for table `user_admin`
 --
 
-INSERT DELAYED IGNORE INTO `user_admin` (`id`, `username`, `password`, `lv`, `created_at`, `updated_at`) VALUES
+INSERT INTO `user_admin` (`id`, `username`, `password`, `lv`, `created_at`, `updated_at`) VALUES
 (1, 'admin', '$2y$10$GqimVJQMqLQ.iCrPyrpexe/R/arEO6DoEVBICwxr4gAE.yijqoHIe', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'admin2', '$2y$10$DlDQCWEOs7xmL.OKcwPsvee7Nojga3lKr.7hYhl4/FrgysAhVM556', 1, '2015-09-22 11:02:56', '2015-09-22 11:02:56');
 
@@ -1477,7 +1477,7 @@ CREATE TABLE IF NOT EXISTS `user_pwd` (
 -- Dumping data for table `user_pwd`
 --
 
-INSERT DELAYED IGNORE INTO `user_pwd` (`name`, `pass`) VALUES
+INSERT  INTO `user_pwd` (`name`, `pass`) VALUES
 ('xampp', 'wampp');
 
 -- --------------------------------------------------------
@@ -1501,7 +1501,7 @@ CREATE TABLE IF NOT EXISTS `ward` (
 -- Dumping data for table `ward`
 --
 
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('00001', 'Phúc Xá', 'Phường', '21 02 52N, 105 50 52E', '001'),
 ('00004', 'Trúc Bạch', 'Phường', '21 02 50N, 105 50 21E', '001'),
 ('00006', 'Vĩnh Phúc', 'Phường', '21 02 37N, 105 48 28E', '001'),
@@ -2330,7 +2330,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('02443', 'Chiêu Yên', 'Xã', '21 59 09N, 105 09 40E', '075'),
 ('02446', 'Trung Trực', 'Xã', '21 57 22N, 105 16 50E', '075'),
 ('02449', 'Xuân Vân', 'Xã', '21 57 11N, 105 13 53E', '075');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT  INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('02452', 'Phúc Ninh', 'Xã', '21 56 24N, 105 11 05E', '075'),
 ('02455', 'Hùng Lợi', 'Xã', '21 54 10N, 105 28 47E', '075'),
 ('02458', 'Trung Sơn', 'Xã', '21 54 20N, 105 24 47E', '075'),
@@ -3176,7 +3176,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('04852', 'Đồng Chum', 'Xã', '20 57 10N, 104 58 44E', '150'),
 ('04855', 'Tân Minh', 'Xã', '20 55 14N, 105 08 41E', '150'),
 ('04858', 'Đoàn Kết', 'Xã', '20 55 01N, 105 04 32E', '150');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('04861', 'Đồng Ruộng', 'Xã', '20 54 17N, 105 00 14E', '150'),
 ('04864', 'Hào Lý', 'Xã', '20 55 31N, 105 15 51E', '150'),
 ('04867', 'Tu Lý', 'Xã', '20 53 34N, 105 14 56E', '150'),
@@ -4009,7 +4009,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('07342', 'Việt Ngọc', 'Xã', '21 22 56N, 106 01 59E', '216'),
 ('07345', 'Song Vân', 'Xã', '21 22 41N, 106 03 09E', '216'),
 ('07348', 'Ngọc Châu', 'Xã', '21 22 39N, 106 05 01E', '216');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('07351', 'Ngọc Vân', 'Xã', '21 21 31N, 106 02 27E', '216'),
 ('07354', 'Việt Lập', 'Xã', '21 21 16N, 106 08 59E', '216'),
 ('07357', 'Liên Chung', 'Xã', '21 21 36N, 106 10 14E', '216'),
@@ -4848,7 +4848,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('09826', 'Đồng Tháp', 'Xã', '21 05 04N, 105 39 04E', '273'),
 ('09829', 'Song Phượng', 'Xã', '21 04 35N, 105 40 00E', '273'),
 ('09832', 'Trạm Trôi', 'Thị Trấn', '21 04 07N, 105 42 26E', '274');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('09835', 'Đức Thượng', 'Xã', '21 04 33N, 105 41 11E', '274'),
 ('09838', 'Minh Khai', 'Xã', '21 04 04N, 105 40 15E', '274'),
 ('09841', 'Dương Liễu', 'Xã', '21 03 39N, 105 39 57E', '274'),
@@ -5680,7 +5680,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('12301', 'Song Mai', 'Xã', '20 44 31N, 106 02 14E', '331'),
 ('12304', 'Chính Nghĩa', 'Xã', '20 45 27N, 106 03 35E', '331'),
 ('12307', 'Nhân La', 'Xã', '20 45 41N, 106 04 44E', '331');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('12310', 'Phú Thịnh', 'Xã', '20 44 38N, 105 58 53E', '331'),
 ('12313', 'Mai Động', 'Xã', '20 43 14N, 105 58 14E', '331'),
 ('12316', 'Đức Hợp', 'Xã', '20 43 24N, 105 59 21E', '331'),
@@ -6513,7 +6513,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('14788', 'Tân Sơn', 'Phường', '19 48 22N, 105 46 03E', '380'),
 ('14791', 'Đông Cương', 'Xã', '19 50 34N, 105 45 44E', '380'),
 ('14794', 'Đông Hương', 'Xã', '19 48 40N, 105 47 30E', '380');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('14797', 'Đông Hải', 'Xã', '19 48 29N, 105 48 19E', '380'),
 ('14800', 'Quảng Hưng', 'Xã', '19 47 09N, 105 49 05E', '380'),
 ('14803', 'Quảng Thắng', 'Xã', '19 46 54N, 105 45 47E', '380'),
@@ -7347,7 +7347,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('17278', 'Giai Xuân', 'Xã', '19 10 17N, 105 12 59E', '423'),
 ('17281', 'Nghĩa Bình', 'Xã', '19 09 46N, 105 23 32E', '423'),
 ('17284', 'Nghĩa Đồng', 'Xã', '19 10 29N, 105 20 50E', '423');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('17287', 'Đồng Văn', 'Xã', '19 07 50N, 105 06 44E', '423'),
 ('17290', 'Nghĩa Thái', 'Xã', '19 09 25N, 105 18 55E', '423'),
 ('17293', 'Nghĩa Hợp', 'Xã', '19 08 14N, 105 20 16E', '423'),
@@ -8184,7 +8184,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('19750', 'Tây Lộc', 'Phường', '16 28 39N, 107 33 46E', '474'),
 ('19753', 'Thuận Lộc', 'Phường', '16 29 01N, 107 34 21E', '474'),
 ('19756', 'Phú Hiệp', 'Phường', '16 29 10N, 107 34 58E', '474');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('19759', 'Phú Hậu', 'Phường', '16 29 41N, 107 34 58E', '474'),
 ('19762', 'Thuận Hòa', 'Phường', '16 28 10N, 107 34 14E', '474'),
 ('19765', 'Thuận Thành', 'Phường', '16 28 16N, 107 34 34E', '474'),
@@ -9025,7 +9025,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('22147', 'An Hòa', 'Xã', '13 14 14N, 109 16 42E', '559'),
 ('22150', 'An Hiệp', 'Xã', '13 14 07N, 109 13 58E', '559'),
 ('22153', 'An Mỹ', 'Xã', '13 12 30N, 109 16 06E', '559');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('22156', 'An Chấn', 'Xã', '13 11 01N, 109 16 31E', '559'),
 ('22159', 'An Thọ', 'Xã', '13 10 40N, 109 11 52E', '559'),
 ('22162', 'An Phú', 'Xã', '13 09 22N, 109 15 45E', '555'),
@@ -9883,7 +9883,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('24502', 'Ea Phê', 'Xã', '12 45 27N, 108 20 38E', '654'),
 ('24505', 'Ea Knuec', 'Xã', '12 41 23N, 108 13 00E', '654'),
 ('24508', 'Ea Yông', 'Xã', '12 42 13N, 108 16 51E', '654');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('24511', 'Hòa An', 'Xã', '12 42 47N, 108 19 57E', '654'),
 ('24514', 'Ea Kuăng', 'Xã', '12 41 27N, 108 23 17E', '654'),
 ('24517', 'Hoà Đông', 'Xã', '12 41 38N, 108 10 18E', '654'),
@@ -10730,7 +10730,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('26845', 'Tăng Nhơn Phú B', 'Phường', '10 49 50N, 106 47 11E', '763'),
 ('26848', 'Phước Long B', 'Phường', '10 49 07N, 106 46 39E', '763'),
 ('26851', 'Phước Long A', 'Phường', '10 49 22N, 106 45 44E', '763');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('26854', 'Trường Thạnh', 'Phường', '10 48 26N, 106 49 04E', '763'),
 ('26857', 'Long Phước', 'Phường', '10 48 17N, 106 51 20E', '763'),
 ('26860', 'Long Trường', 'Phường', '10 47 39N, 106 49 13E', '763'),
@@ -11567,7 +11567,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('29323', 'Ninh Thới', 'Xã', '9 47 20N, 106 04 47E', '845'),
 ('29326', 'Phong Phú', 'Xã', '9 49 51N, 106 05 25E', '845'),
 ('29329', 'Phong Thạnh', 'Xã', '9 50 32N, 106 08 05E', '845');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('29332', 'Tam Ngãi', 'Xã', '9 54 19N, 106 01 32E', '845'),
 ('29335', 'Thông Hòa', 'Xã', '9 55 19N, 106 04 54E', '845'),
 ('29338', 'Thạnh Phú', 'Xã', '9 55 59N, 106 06 23E', '845'),
@@ -12415,7 +12415,7 @@ INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `distri
 ('31678', 'Lịch Hội Thượng', 'Xã', '9 28 08N, 106 08 58E', '951'),
 ('31679', 'Lịch Hội Thượng', 'Thị Trấn', '', '951'),
 ('31681', 'Trung Bình', 'Xã', '9 28 40N, 106 10 59E', '951');
-INSERT DELAYED IGNORE INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
+INSERT INTO `ward` (`wardid`, `name`, `type`, `location`, `districtid`) VALUES
 ('31684', 'Mỹ Xuyên', 'Thị Trấn', '9 33 22N, 105 59 06E', '947'),
 ('31687', 'Tài Văn', 'Xã', '9 33 29N, 106 02 37E', '951'),
 ('31690', 'Đại Tâm', 'Xã', '9 33 02N, 105 55 10E', '947'),
